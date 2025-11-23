@@ -1,0 +1,186 @@
+{
+    "meetings": [
+        {
+            "id": "20251115-143130",
+            "timestamp": "2025-11-15T14:31:30.181975",
+            "topics": [
+                "API",
+                "Frontend Review"
+            ],
+            "summary": "Team discussed updates.",
+            "decisions": [
+                "Deploy next week"
+            ],
+            "risks": [
+                "Delay in testing"
+            ],
+            "action_items": [
+                {
+                    "task": "Finish frontend",
+                    "owner": "Neha",
+                    "due_date": "Tomorrow",
+                    "priority": "High",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": "20251115-144610",
+            "timestamp": "2025-11-15T14:46:10.123269",
+            "topics": [
+                "Client report completion",
+                "Presentation slides preparation",
+                "API documentation update"
+            ],
+            "summary": "The meeting focused on assigning specific tasks and setting deadlines for team members. Alice will complete the client report by Tuesday, Bob will prepare presentation slides for Friday, and Neha will update the API documentation before Monday.",
+            "decisions": [
+                "Alice will finish the client report by Tuesday.",
+                "Bob will prepare slides for Friday's presentation.",
+                "Neha will update the API documentation before Monday."
+            ],
+            "risks": [],
+            "action_items": [
+                {
+                    "task": "finish the client report",
+                    "owner": "Alice",
+                    "due_date": "by Tuesday",
+                    "priority": "High",
+                    "status": "pending"
+                },
+                {
+                    "task": "prepare slides for Friday's presentation",
+                    "owner": "Bob",
+                    "due_date": "by Friday",
+                    "priority": "High",
+                    "status": "pending"
+                },
+                {
+                    "task": "update the API documentation",
+                    "owner": "Neha",
+                    "due_date": "before Monday",
+                    "priority": "High",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": "20251115-152222",
+            "timestamp": "2025-11-15T15:22:22.371444",
+            "topics": [
+                "Client report completion",
+                "Presentation slide preparation",
+                "API documentation updates",
+                "Task assignments and deadlines"
+            ],
+            "summary": "The meeting addressed key task assignments and their respective deadlines. Alice is responsible for finalizing the client report by Tuesday. Bob is tasked with preparing slides for an upcoming presentation scheduled for Friday. Neha will ensure the API documentation is updated before Monday.",
+            "decisions": [
+                "Alice will finish the client report by Tuesday.",
+                "Bob will prepare slides for Friday's presentation.",
+                "Neha will update the API documentation before Monday."
+            ],
+            "risks": [],
+            "action_items": [
+                {
+                    "task": "finish the client report",
+                    "owner": "Alice",
+                    "due_date": "by Tuesday",
+                    "priority": "Medium",
+                    "status": "pending"
+                },
+                {
+                    "task": "prepare slides for Friday's presentation",
+                    "owner": "Bob",
+                    "due_date": "by Friday",
+                    "priority": "Medium",
+                    "status": "pending"
+                },
+                {
+                    "task": "update the API documentation",
+                    "owner": "Neha",
+                    "due_date": "before Monday",
+                    "priority": "Medium",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": "20251115-152428",
+            "timestamp": "2025-11-15T15:24:28.278767",
+            "topics": [
+                "Client report completion",
+                "Presentation slide preparation",
+                "API documentation update"
+            ],
+            "summary": "The meeting focused on assigning tasks and setting deadlines for several deliverables. Alice is tasked with completing the client report by Tuesday. Bob will prepare the slides for the upcoming Friday presentation. Neha is responsible for updating the API documentation, with a deadline set for Monday.",
+            "decisions": [
+                "Alice will finish the client report by Tuesday.",
+                "Bob will prepare slides for Friday's presentation.",
+                "Neha will update the API documentation before Monday."
+            ],
+            "risks": [],
+            "action_items": [
+                {
+                    "task": "finish the client report",
+                    "owner": "Alice",
+                    "due_date": "by Tuesday",
+                    "priority": "Medium",
+                    "status": "pending"
+                },
+                {
+                    "task": "prepare slides for Friday's presentation",
+                    "owner": "Bob",
+                    "due_date": "Friday",
+                    "priority": "Medium",
+                    "status": "pending"
+                },
+                {
+                    "task": "update the API documentation",
+                    "owner": "Neha",
+                    "due_date": "before Monday",
+                    "priority": "Medium",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": "20251115-152930",
+            "timestamp": "2025-11-15T15:29:30.900016",
+            "topics": [
+                "Client report completion",
+                "Presentation slide preparation",
+                "API documentation update",
+                "Task assignments and deadlines"
+            ],
+            "summary": "The meeting focused on assigning upcoming tasks and setting their respective deadlines. Alice is tasked with completing the client report by Tuesday. Bob will prepare the slides for the Friday presentation. Neha is responsible for updating the API documentation before Monday.",
+            "decisions": [
+                "Alice will finish the client report by Tuesday.",
+                "Bob will prepare slides for Friday's presentation.",
+                "Neha will update the API documentation before Monday."
+            ],
+            "risks": [],
+            "action_items": [
+                {
+                    "task": "finish the client report",
+                    "owner": "Alice",
+                    "due_date": "by Tuesday",
+                    "priority": "Medium",
+                    "status": "pending"
+                },
+                {
+                    "task": "prepare slides for Friday's presentation",
+                    "owner": "Bob",
+                    "due_date": "by Friday",
+                    "priority": "Medium",
+                    "status": "pending"
+                },
+                {
+                    "task": "update the API documentation",
+                    "owner": "Neha",
+                    "due_date": "before Monday",
+                    "priority": "Medium",
+                    "status": "pending"
+                }
+            ]
+        }
+    ]
+}
