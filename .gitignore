@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+last_meeting.md
+last_meeting.html
+.pytest_cache/
