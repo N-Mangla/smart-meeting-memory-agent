@@ -1,102 +1,63 @@
 # Smart Meeting Memory Agent
 
-A lightweight multi-agent system that analyzes meeting transcripts, extracts action items, and stores long-term meeting memory.  
-This project was built as part of the Google AI Agents Intensive program using Gemini 2.5 Flash/Pro.
+A small Python prototype that extracts meeting summaries and action items through the Gemini REST API, then saves results to a local JSON memory file. Built during the Google AI Agents Intensive program.
 
-# Why I Built This
+## What it does
 
-During stand-ups, client calls, and planning meetings, it’s easy to forget:
+- `TranscriptAnalyzer`: extracts topics, summaries, decisions, and risks.
+- `ActionItemExtractor`: extracts tasks, owners, deadlines, priority, and status.
+- `OrchestratorAgent`: coordinates both steps and saves the result through `MemoryManager`.
+- `ReportGenerator`: exports Markdown and HTML reports from the example runner.
 
-* who committed to what  
-* deadlines  
-* decisions taken  
-* risks  
-* follow-ups  
+The repository uses a sequential Python pipeline with two Gemini calls, not independently deployed autonomous services. `main.py` is a placeholder; `test_orchestrator.py` is the executable sample runner, not a mocked automated unit test.
 
-I wanted a simple tool that could take a meeting transcript and turn it into structured, useful information — automatically.
+## Run locally
 
-# System Overview
+Use Python 3.10+ and a Gemini API key with access to the configured models.
 
-The project is designed as four small cooperating agents:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-# 1. Transcript Analyzer (Agent 1)
-Understands the meeting and extracts:
-* topics
-* summary
-* decisions
-* risks
+On Windows, activate the environment using `.venv\\Scripts\\activate`.
 
-# 2. Action Item Extractor (Agent 2)
-Finds all actionable items, including:
-* tasks
-* owners
-* due dates
-* priority
-* status
+Create a `.env` file at the repository root:
 
-# 3. Memory Manager (Agent 3)
-Stores all past meetings in persistent JSON memory
-so you can query past tasks or review history.
+```env
+GEMINI_API_KEY=your_api_key_here
+```
 
-# 4. Orchestrator (Agent 4)
-Runs the entire end-to-end pipeline:
-* analyzes the transcript  
-* extracts action items  
-* saves results  
-* returns a final combined report  
+Then run:
 
+```bash
+python test_orchestrator.py
+```
 
-# Project Structure
-smart_meeting_memory_agent/
-│
-├── agents/
-│ ├── transcript_analyzer.py
-│ ├── action_item_extractor.py
-│ ├── memory_manager.py
-│ └── orchestrator.py
-│
-├── tools/
-│ ├── logger_tool.py
-│ └── pretty.py
-│ └── report_generator.py
-│
-├── meeting_memory.json
-└── README.md
+This makes live API requests (subject to Gemini access, quotas and model availability), appends a meeting record to `meeting_memory.json`, and writes `last_meeting.md` and `last_meeting.html`. Never commit real meeting transcripts, API keys, or other confidential material.
 
+## Repository structure
 
-# How to Run
+```text
+agents/
+  transcript_analyzer.py
+  action_item_extractor.py
+  memory_manager.py
+  orchestrator.py
+tools/
+  logger_tool.py
+  pretty.py
+  report_generator.py
+test_orchestrator.py
+meeting_memory.json
+requirements.txt
+```
 
-1. Set your Google API key in `.env`:
-GEMINI_API_KEY=your_key_here
+The included `meeting_memory.json` contains example records. The repository currently lacks an offline mocked-test suite; successful local execution requires working API credentials and network access.
 
-2. Run the orchestrator:
+## Implementation notes
 
-```python
-from agents.orchestrator import OrchestratorAgent
+Model responses are parsed as JSON by the orchestrator. Gemini Flash is used by default, with a Pro fallback when the API returns 404. The local memory file is a demonstration of persistence, not a secure multi-user data store.
 
-agent = OrchestratorAgent()
-result = agent.process_meeting(transcript_text)
-print(result)
-
-Example Output
-{
-  "topics": [...],
-  "summary": "...",
-  "decisions": [...],
-  "risks": [...],
-  "action_items": [...]
-}
-
-Features
-
-Works on any meeting transcript
-Uses Gemini 2.5 Flash / Pro (fallback mechanism built-in)
-Automatic long-term memory
-Clean JSON output
-Simple, modular, and easy to extend
-
-Notes
-
-This project intentionally keeps everything lightweight and readable.
-Focus is on clarity and usefulness, not complexity.
-
+This project demonstrates experimental Python/LLM integration rather than production-level AI-agent infrastructure.
